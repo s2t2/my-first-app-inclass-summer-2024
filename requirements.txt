@@ -8,4 +8,6 @@ requests
 plotly
 python-dotenv
 
+flask
+
 pytest
