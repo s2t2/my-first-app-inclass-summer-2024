@@ -1,0 +1,55 @@
+
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "stocks_form" %}
+
+{% block content %}
+
+    <!--
+    <h2>Stocks Form</h2>
+
+    <p>Request some stock market data...</p>
+
+    <form action="/stocks/dashboard" method="POST">
+
+        <label>Stock Symbol:</label>
+        <input type="text" name="symbol" placeholder="MSFT" value="MSFT">
+        <br>
+
+        <label>Risk Tolerance:</label>
+        <select name="risk_level">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+        <br>
+
+        <button class="btn btn-success">Submit</button>
+    </form>
+    -->
+
+    <!-- chat gpt "update this form to use bootstrap 5 styling" provides: -->
+    <div class="container mt-5">
+        <h2>Stocks Form</h2>
+
+        <p>Request some stock market data...</p>
+
+        <form action="/stocks/dashboard" method="POST">
+            <div class="mb-3">
+                <label for="symbol" class="form-label">Stock Symbol:</label>
+                <input type="text" class="form-control" id="symbol" name="symbol" placeholder="MSFT" value="MSFT">
+            </div>
+
+            <div class="mb-3">
+                <label for="risk_level" class="form-label">Risk Tolerance:</label>
+                <select class="form-select" id="risk_level" name="risk_level">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}
